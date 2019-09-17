@@ -8,7 +8,7 @@ function printQuestionMarks(num) {
     }
 
     return arr.toString();
-}
+};
 
 function objToSql(ob) {
     var arr = [];
@@ -29,7 +29,7 @@ function objToSql(ob) {
 
 
     return arr.toString();
-}
+};
 
 var orm = {
     all: function (tableInput, cb) {
@@ -61,7 +61,7 @@ var orm = {
             cb(result);
         });
     },
-    // An example of objColVals would be {name: panther, sleepy: true}
+    // An example of objColVals 
     update: function (table, objColVals, condition, cb) {
         var queryString = "UPDATE " + table;
 
