@@ -1,10 +1,12 @@
 $(document).ready(function () {
     $(".change-devour").on("click", function (event) {
+        event.preventDefault();
+
         var id = $(this).data("id");
-        var newDevour = $(this).data("newDevour");
+        //var newDevour = $(this).data("newDevour");
 
         var newBurgerSpot = {
-            devoured: newDevour
+            devoured: 1
         };
 
         // Send the PUT request.
@@ -26,7 +28,7 @@ $(document).ready(function () {
 
         var newBurger = {
             burger_name: $("#ca").val().trim(),
-            //devoured: $("[burger_name=devoured]:checked").val().trim(),
+            devoured: 0,
         };
 
         // Send the POST request.
@@ -43,11 +45,14 @@ $(document).ready(function () {
     });
 
     $(".delete-burger").on("click", function (event) {
+        event.preventDefault();
+
         var id = $(this).data("id");
 
         // Send the DELETE request.
         $.ajax("/api/burgers/" + id, {
-            type: "DELETE"
+            type: "DELETE",
+            url: "/api/burgers/" + id
         }).then(
             function () {
                 console.log("deleted burger", id);
