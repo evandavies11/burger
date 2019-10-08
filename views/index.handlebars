@@ -1,19 +1,28 @@
 <div class="container">
 
     <div class="jumbotron">
-        <h1>Order Your Burger </h1>
-        <p>Burger Orders for Pickup.</p>
+        <h1>Order Your </h1>
+        <pre id="burger-text">__/\\\\\\\\\\\\\____/\\\________/\\\____/\\\\\\\\\_________/\\\\\\\\\\\\__/\\\\\\\\\\\\\\\____/\\\\\\\\\_____        
+ _\/\\\/////////\\\_\/\\\_______\/\\\__/\\\///////\\\_____/\\\//////////__\/\\\///////////___/\\\///////\\\___       
+  _\/\\\_______\/\\\_\/\\\_______\/\\\_\/\\\_____\/\\\____/\\\_____________\/\\\_____________\/\\\_____\/\\\___      
+   _\/\\\\\\\\\\\\\\__\/\\\_______\/\\\_\/\\\\\\\\\\\/____\/\\\____/\\\\\\\_\/\\\\\\\\\\\_____\/\\\\\\\\\\\/____     
+    _\/\\\/////////\\\_\/\\\_______\/\\\_\/\\\//////\\\____\/\\\___\/////\\\_\/\\\///////______\/\\\//////\\\____    
+     _\/\\\_______\/\\\_\/\\\_______\/\\\_\/\\\____\//\\\___\/\\\_______\/\\\_\/\\\_____________\/\\\____\//\\\___   
+      _\/\\\_______\/\\\_\//\\\______/\\\__\/\\\_____\//\\\__\/\\\_______\/\\\_\/\\\_____________\/\\\_____\//\\\__  
+       _\/\\\\\\\\\\\\\/___\///\\\\\\\\\/___\/\\\______\//\\\_\//\\\\\\\\\\\\/__\/\\\\\\\\\\\\\\\_\/\\\______\//\\\_ 
+        _\/////////////_______\/////////_____\///________\///___\////////////____\///////////////__\///________\///__
+</pre>
         <br>
-        <h2>Select a Burger or Sandwich</h2>
+
         <panel>
             <form class="create-form">
                 <div class="form-group">
-                    <label for="newburger">Order Fresh Burger</label>
+                    <label for="newburger">Order A Burger</label>
                     {{!-- <input type="text" id="newburger" name="burger"> --}}
                     <input type="text" data-placeholder="" id="newburger" name="burger">
 
 
-                    <button type="submit" class="btn btn-success" id="addburger">
+                    <button type="submit" class="btn btn-success" id="addburger">Order
                         <span class="fa fa-thumbs-up"></span>
                     </button>
                 </div>
@@ -22,9 +31,9 @@
     </div>
     <div class="row">
         <div class="col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading" id="leftside"><strong>Order Your Burger</strong>
-                    <p>Send order to cashier when ready for pick up</p>
+            <div class="panel panel-default" id="leftside">
+                <div class="panel-heading" id="leftside"><strong>Your Burgers</strong>
+
                 </div>
                 <div class="panel-body">
 
@@ -34,7 +43,7 @@
 
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
                         <button type="button" class="eatburger btn btn-warning" id="eatbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span></button>
+                            data-newDevoured="{{devour}}"><span class="fa fa-usd"></span>Devour</button>
                         <hr>
                         {{/unless}}
                         {{/each}}
@@ -44,9 +53,9 @@
             </div>
         </div>
         <div class="col-sm-6">
-            <div class="panel panel-default">
-                <div class="panel-heading" id="rightside"><strong>Burger is Ready for Pick Up</strong>
-                    <p>Remove order from pick up when delivered</p>
+            <div class="panel panel-default" id="rightside">
+                <div class="panel-heading" id="rightside"><strong>Remove Your Burger</strong>
+
                 </div>
                 <div class="panel-body">
                     <ul>
@@ -54,7 +63,7 @@
                         {{#if devoured}}
                         <span><strong> {{this.id}} - {{this.burger_name}}</strong></span>
                         <button type="button" class="trashburger btn btn-danger" id="trashbutton" data-id="{{this.id}}"
-                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span></button>
+                            data-newDevoured="{{devour}}"><span class="fa fa-trash"></span>Remove</button>
                         <hr>
                         {{/if}}
                         {{/each}}

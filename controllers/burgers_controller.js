@@ -2,7 +2,7 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model burger 
+// Import the burger model
 var burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.

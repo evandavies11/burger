@@ -1,7 +1,32 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=VT323&display=swap');
 
 body{
     color: #39ff14;
     background-color: black;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+
 }
+
+.jumbotron{
+    background-color: black;
+    text-align: center;
+    border-style: dashed;
+    padding-top: 15px;
+    margin-top: 45px;
+}
+
+#burger-text{
+    color: #39ff14;
+    background-color: black;
+    font-size: 15px;
+}
+
+#rightside{
+    border-style: dashed;
+}
+
+#leftside{
+    border-style: dashed;
+}
+
